@@ -76,8 +76,9 @@ This can be achieved e.g. by choosing a suitable release commit from git, as fol
 
 ```
 git clone git@github.com:Unity-Technologies/ml-agents.git
+cd ml-agents
 git checkout 1ead1ccc2c842bd00a372eee5c4a47e429432712 
-cd ml-agents/python
+cd python
 pip install -e .
 ```
 
