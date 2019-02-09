@@ -87,4 +87,4 @@ The chosen commit is the one tagged as version 0.4.0b in [the repository's relea
 
 ## How to run this code
 
-The code to define and train the agent is included in the interactive Python notebook [Report.ipynb](Report.ipynb). To train the model from scratch, execute each code cell in the notebook in order. To evaluate a pre-trained model, create an agent and replace network weights with ones loaded from a checkpoint included in the repository.
+The code to define and train the agent is included in the interactive Python notebook [Report.ipynb](Report.ipynb). To train the model from scratch, execute each code cell in the notebook in order. To evaluate a pre-trained model, create an agent and replace network weights with ones loaded from a checkpoint included in the repository, as shown in section 5. If you read the report outside of an actual Jupyter environment, e.g. in the Github UI, some of the output from simulation runs is verbose - inside Jupyter this becomes a scrollable area with limited height, leading to better readability.
