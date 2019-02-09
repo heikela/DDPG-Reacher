@@ -65,6 +65,7 @@ Alternatively, if you have access to the Udacity environment set up for this pro
 
 The solution depends on the following packages:
  - numpy
+ - scipy
  - pytorch (0.4.0)
  - matplotlib
 
