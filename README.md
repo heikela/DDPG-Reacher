@@ -18,7 +18,7 @@ The agent receives a +0.1 reward during each time step during which it manages t
 
 ### Observations
 
-Although a first person view of the world is provided for a visualisation of the environment for humans, the agent's observation space is not this image. The agent observes a vector of 33 floating point numbers. The description of the environment makes it clear that these include position, rotation, velocity and angular velocity of the arm. Presumably they also contain information about the position of the target. In this project I will attempt to train an agent that uses an artificial neural network (ANN) to process the observations, without any a priori knowledge of finer details of the observation space.
+Although a first person view of the world is provided for a visualisation of the environment for humans, the agent's observation space is not this image. The agent observes a vector of 33 floating point numbers. The description of the environment makes it clear that these include position, rotation, velocity and angular velocity of the arm. Presumably they also contain information about the position of the target. In this project I will attempt to train an agent that uses an artificial neural network (ANN) to process the observations and select actions without any a priori knowledge of finer details of the observation space.
 
 ### Actions
 
@@ -28,7 +28,7 @@ At each time step, the agent has to choose an action that consists of 4 continuo
 
 The environment is considered solved when the agent achieves an average score of +30 over 100 consecutive episodes. By convention we say the agent solved the environment on the timestep N if timesteps N + 1 to N + 100 are the ones whose average first reaches this goal.
 
-The environment was provided in two different versions. One for training an agent in parallel in several environments, and the other one for training a single agent in a single environmebt. In this project, we train multiple agents according to the population based training method, but still use the single-agent environments because we are not really training one agent in multiple envioronments - each agent in the population is potentially very different from each other.
+The environment was provided in two different versions. One for training an agent in parallel in several environments, and the other one for training a single agent in a single environment. In this project, we train multiple agents using approaches from the [population based training method](https://arxiv.org/abs/1711.09846), but still use the single-agent environments because we are not really training one agent in multiple environments - each agent in the population is potentially very different from each other.
 
 The project instructions give two different ways to evaluate when the environment is solved, corresponding to the cases where an agent is trained using one environment or multiple parallel ones. Becauase the approach taken here, multiple independent agents training effectively in parallel, isn't an exact match to either case, we evaluate it both ways: 1) determining after how many episodes any one of the agents reaches the solution threshold, and 2) evaluating when the population of agents, taken together (which makes sense if we view the population as a meta-agent) reach an average performance over 100 episodes (for each agent in the population) that reaches the solution threshold.
 
@@ -81,6 +81,8 @@ git checkout 1ead1ccc2c842bd00a372eee5c4a47e429432712
 cd python
 pip install -e .
 ```
+
+The chosen commit is the one tagged as version 0.4.0b in [the repository's releases page](https://github.com/Unity-Technologies/ml-agents/releases). The final command installs the python dependencies of the ml agents connector.
 
 ## How to run this code
 
